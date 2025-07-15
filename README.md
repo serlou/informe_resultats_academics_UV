@@ -165,4 +165,7 @@ Si necesitas cambios más profundos:
 
 ## Contacto
 
-Si tienes problemas con la configuración, contacta con el autor original del sistema.
+Si tienes problemas con la configuración, contacta con el autor original del sistema:
+sergio.lopez-urena@uv.es
+
+Copyright © 2025 Sergio López Ureña
