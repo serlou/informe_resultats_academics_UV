@@ -15,7 +15,7 @@ TITULACIONES = [
     "Grau en Matemàtiques",
     "Doble Grau en Matemàtiques i en Enginyeria Telemàtica",
     "Doble Grau en Matemàtiques i en Enginyeria Informàtica", 
-    # "Doble Grau en Física i Matemàtiques"
+    "Doble Grau en Física i Matemàtiques"
 ]
 
 # ASIGNATURAS
@@ -28,7 +28,14 @@ ASIGNATURAS = {
     "34161": "Mètodes numèrics per a l'àlgebra lineal",
     "34164": "Topologia",
     "34168": "Estructures algebraiques",
-    "34170": "Equacions diferencials ordinàries"
+    "34170": "Equacions diferencials ordinàries",
+    "34242": "Mecànica I",
+    "34245": "Termodinàmica",
+    "34251": "Laboratori de termodinàmica",
+    "36586": "Anàlisi Matemàtica II F-M",
+    "36587": "Àlgebra Lineal i Geometria II F-M",
+    "36588": "Equacions Diferencials Ordinàries F-M",
+    "36589": "Mètodes Numèrics"
 }
 
 # TIPOS DE CONVOCATORIAS
@@ -71,6 +78,39 @@ ETIQUETAS_RESULTADOS = {
     "NO": "Notable",
     "EX": "Excel·lent",
     "MH": "Matrícula d'Honor"
+}
+
+# MAPEO DE CALIFICACIONES
+# =======================
+# Mapeo de todas las posibles variantes de calificaciones encontradas en los archivos Excel
+# hacia los códigos internos del sistema
+MAPEO_CALIFICACIONES = {
+    "NP": [
+        "No presentat",
+        "No presentado"
+    ],
+    "SU": [
+        "Suspès", 
+        "Suspenso"
+    ],
+    "AP": [
+        "Aprovat",
+        "Aprobado"
+    ],
+    "NO": [
+        "Notable"
+    ],
+    "EX": [
+        "Excel·lent",
+        "Excelente", 
+        "Sobresaliente"
+    ],
+    "MH": [
+        "Matrícula d'honor",
+        "Matrícula d'Honor", 
+        "Matrícula de Honor",
+        "Matrícula de honor"
+    ]
 }
 
 # COLORES PARA GRÁFICOS

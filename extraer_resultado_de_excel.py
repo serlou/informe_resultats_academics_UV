@@ -5,7 +5,7 @@ import warnings
 from config import (
     ASIGNATURAS, ETIQUETAS_RESULTADOS, COLORES_RESULTADOS, 
     TIPOS_CONVOCATORIAS, PATRON_CODIGO_ASIGNATURA, PATRON_GRUPO, 
-    PATRON_CARPETA, TEXTOS
+    PATRON_CARPETA, TEXTOS, MAPEO_CALIFICACIONES
 )
 warnings.filterwarnings("ignore")
 
@@ -57,22 +57,15 @@ def extraer_resultado_de_excel(filename):
             # Convertir a string y limpiar espacios
             resultado_str = str(resultado).strip() if pd.notna(resultado) else ""
             
-            if resultado_str == "No presentat":
-                resultados["NP"] += 1
-            elif resultado_str == "Suspès":
-                resultados["SU"] += 1
-            elif resultado_str == "Aprovat":
-                resultados["AP"] += 1
-            elif resultado_str == "Notable":
-                resultados["NO"] += 1
-            elif resultado_str == "Excel·lent":
-                resultados["EX"] += 1
-            elif resultado_str == "Matrícula d'honor" or resultado_str == "Matrícula d'Honor":
-                resultados["MH"] += 1
-            elif resultado_str == "" or resultado_str == "nan":
-                # Ignorar celdas vacías o NaN
-                continue
-            else:
+            # Buscar la calificación en el mapeo configurado
+            calificacion_encontrada = False
+            for codigo, variantes in MAPEO_CALIFICACIONES.items():
+                if resultado_str in variantes:
+                    resultados[codigo] += 1
+                    calificacion_encontrada = True
+                    break
+            
+            if not calificacion_encontrada and resultado_str != "" and resultado_str != "nan":
                 # Si encontramos algo que no es una calificación conocida, podría ser el final de los datos
                 # Solo mostrar advertencia si no es una celda vacía
                 if resultado_str and resultado_str != "nan":
