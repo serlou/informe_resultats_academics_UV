@@ -1,10 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import os
-from openpyxl import load_workbook
-import sys
-import re
 import warnings
 from config import (
     ASIGNATURAS, ETIQUETAS_RESULTADOS, COLORES_RESULTADOS, 

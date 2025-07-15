@@ -103,8 +103,15 @@ PATRON_GRUPO = r'_([AB])_'             # Para grupos A, B
 
 ### 1. Instalación de Dependencias
 ```bash
-pip install pandas matplotlib openpyxl xlrd
+pip install pandas matplotlib openpyxl
 ```
+
+**Dependencias necesarias:**
+- `pandas`: Para leer y procesar archivos Excel
+- `matplotlib`: Para generar los gráficos de sectores
+- `openpyxl`: Motor para escribir archivos Excel modernos
+
+**Nota:** El sistema es compatible con archivos `.xls` y `.xlsx` automáticamente.
 
 ### 2. Generar Informe Completo
 ```bash
