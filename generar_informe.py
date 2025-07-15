@@ -1,5 +1,6 @@
 import os
 import glob
+import shutil
 from extraer_resultado_de_excel import (
     extraer_resultado_de_excel, 
     generar_diagrama_sectores, 
@@ -11,6 +12,19 @@ from config import (
     DIRECTORIO_OUTPUT, SUBDIRECTORIO_GRAFICOS, ARCHIVO_LATEX,
     LATEX_CONFIG, TEXTOS, CURSO, AUTOR_INFORME, TITULACIONES
 )
+
+def limpiar_outputs_anteriores():
+    """
+    Elimina toda la carpeta output de ejecuciones anteriores.
+    """
+    print("🧹 Limpiando outputs de ejecuciones anteriores...")
+    
+    # Eliminar toda la carpeta output si existe
+    if os.path.exists(DIRECTORIO_OUTPUT):
+        shutil.rmtree(DIRECTORIO_OUTPUT)
+        print(f"  ✅ Eliminada carpeta completa: {DIRECTORIO_OUTPUT}")
+    
+    print("✅ Limpieza completada\n")
 
 def obtener_archivos_por_carpeta():
     """
@@ -126,6 +140,9 @@ def generar_latex_completo():
     """
     Genera el archivo LaTeX completo con todas las asignaturas.
     """
+    # Limpiar outputs de ejecuciones anteriores
+    limpiar_outputs_anteriores()
+    
     # Obtener archivos organizados por carpetas
     carpetas = obtener_archivos_por_carpeta()
     

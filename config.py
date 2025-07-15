@@ -6,7 +6,7 @@
 # INFORMACIÓN GENERAL
 # ===================
 CURSO = "2o curs"
-AUTOR_INFORME = "Coordinació 2o curs"
+AUTOR_INFORME = "Sergio López Ureña - Coordinació 2o curs"
 
 # TITULACIONES
 # ============
