@@ -1,6 +1,23 @@
 # Sistema de Informes de Resultados Académicos
 
-Este sistema permite generar automáticamente informes en PDF con tablas y gráficos de resultados académicos a partir de archivos Excel.
+Este sistema permite generar automáticamente **dos tipos de informes** en PDF con tablas y gráficos de resultados académicos a partir de archivos Excel:
+
+1. **Informe con Diagrama de Sectores**: Detallado con un gráfico circular por cada asignatura y grupo
+2. **Informe Compacto con Barras Apiladas**: Compacto con una tabla y un gráfico de barras horizontales por convocatoria
+
+## ¿Qué Tipo de Informe Elegir?
+
+### Informe con Diagrama de Sectores (Detallado)
+- ✅ **Ideal para**: Análisis detallado por asignatura
+- ✅ **Contiene**: Un gráfico circular por cada asignatura-grupo 
+- ✅ **Ventajas**: Mucha información visual, fácil de ver distribuciones específicas
+- ❌ **Desventajas**: Documento muy largo (puede ser +50 páginas)
+
+### Informe Compacto con Barras Apiladas (Recomendado)
+- ✅ **Ideal para**: Reuniones, presentaciones, vista general
+- ✅ **Contiene**: Una tabla por convocatoria + un gráfico de barras horizontales
+- ✅ **Ventajas**: Documento corto (~6 páginas), fácil comparación entre asignaturas
+- ✅ **Mejor para**: Coordinación, reuniones de departamento
 
 ## Configuración para Otros Coordinadores
 
@@ -113,12 +130,17 @@ pip install pandas matplotlib openpyxl
 
 **Nota:** El sistema es compatible con archivos `.xls` y `.xlsx` automáticamente.
 
-### 2. Generar Informe Completo
+### 2. Generar Informe con Diagrama de Sectores (Detallado)
 ```bash
-python generar_informe.py
+python generar_informe_sectores.py
 ```
 
-### 3. Procesar un Archivo Individual
+### 3. Generar Informe Compacto con Barras Apiladas
+```bash
+python generar_informe_barras.py
+```
+
+### 4. Procesar un Archivo Individual
 ```python
 from extraer_resultado_de_excel import extraer_resultado_de_excel, generar_diagrama_sectores
 
@@ -132,10 +154,16 @@ generar_diagrama_sectores(resultados, titulo="Mi Gráfico")
 
 ## Archivos de Salida
 
-El sistema genera:
-- `output/informe_resultados.tex`: Archivo LaTeX con el informe completo
-- `output/graficos/`: Carpeta con todos los gráficos en PNG
-- `output/informe_resultados.pdf`: PDF final (después de compilar LaTeX)
+### Informe con Diagrama de Sectores
+- `output/informe_sectores.tex`: Archivo LaTeX completo
+- `output/graficos/`: Gráficos individuales en PNG (uno por asignatura-grupo)
+- `output/informe_sectores.pdf`: PDF final (después de compilar LaTeX)
+
+### Informe Compacto con Barras Apiladas  
+- `output/informe_barras.tex`: Archivo LaTeX compacto
+- `output/graficos/barras_*.png`: Gráficos de barras por convocatoria
+- `output/informe_barras.pdf`: PDF final (después de compilar LaTeX)
+- `output/informe_sectores.pdf`: PDF final (después de compilar LaTeX)
 
 ## Compilación del PDF
 
@@ -167,7 +195,7 @@ pdflatex informe_resultados.tex
 Si necesitas cambios más profundos:
 
 1. **Modificar `extraer_resultado_de_excel.py`**: Para cambiar cómo se procesan los archivos Excel
-2. **Modificar `generar_informe.py`**: Para cambiar la estructura del informe LaTeX
+2. **Modificar `generar_informe_sectores.py`**: Para cambiar la estructura del informe LaTeX
 3. **Añadir nuevos tipos de gráficos**: Extender la función `generar_diagrama_sectores()`
 
 ## Contacto
