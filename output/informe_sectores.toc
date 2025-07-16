@@ -1,0 +1,13 @@
+\babel@toc {catalan}{}\relax 
+\contentsline {section}{\numberline {1}Primer Quadrimestre - Primera Convocatòria}{2}{}%
+\contentsline {subsection}{\numberline {1.1}34154 - Programació matemàtica - Grup A}{2}{}%
+\contentsline {section}{\numberline {2}Primer Quadrimestre - Segona Convocatòria}{3}{}%
+\contentsline {subsection}{\numberline {2.1}34154 - Programació matemàtica - Grup A}{3}{}%
+\contentsline {section}{\numberline {3}Segon Quadrimestre - Primera Convocatòria}{4}{}%
+\contentsline {subsection}{\numberline {3.1}34155 - Àlgebra lineal i geometria II - Grup A}{4}{}%
+\contentsline {section}{\numberline {4}Segon Quadrimestre - Segona Convocatòria}{5}{}%
+\contentsline {subsection}{\numberline {4.1}34155 - Àlgebra lineal i geometria II - Grup A}{5}{}%
+\contentsline {section}{\numberline {5}Assignatures Anuals - Primera Convocatòria}{6}{}%
+\contentsline {subsection}{\numberline {5.1}34156 - Anàlisi matemàtica II - Grup A}{6}{}%
+\contentsline {section}{\numberline {6}Assignatures Anuals - Segona Convocatòria}{7}{}%
+\contentsline {subsection}{\numberline {6.1}34156 - Anàlisi matemàtica II - Grup A}{7}{}%
