@@ -32,6 +32,10 @@ ASIGNATURAS = {
     "34242": "Mecànica I",
     "34245": "Termodinàmica",
     "34251": "Laboratori de termodinàmica",
+    "34651": "Ètica. Legislació i professió",
+    "34670": "Estructures de dades i algorismes",
+    "34879": "Empresa",
+    "34885": "Arquitectura de xarxes de computadors",
     "36586": "Anàlisi Matemàtica II F-M",
     "36587": "Àlgebra Lineal i Geometria II F-M",
     "36588": "Equacions Diferencials Ordinàries F-M",
@@ -134,8 +138,11 @@ DIRECTORIO_EXCELS = "excels"
 DIRECTORIO_OUTPUT = "output"
 SUBDIRECTORIO_GRAFICOS = "graficos"
 
-# Nombre del archivo LaTeX de salida
-ARCHIVO_LATEX = "informe_resultados.tex"
+# Nombre del archivo LaTeX de salida para informe con diagrama de sectores
+ARCHIVO_LATEX_SECTORES = "informe_sectores.tex"
+
+# Nombre del archivo LaTeX de salida para informe compacto con barras apiladas
+ARCHIVO_LATEX_BARRAS = "informe_barras.tex"
 
 # CONFIGURACIÓN REGEX
 # ===================
@@ -169,10 +176,13 @@ TEXTOS = {
     "grupo": "Grup",
     "convocatoria": "Convocatòria",
     "archivo_generado": "Arxiu LaTeX generat",
-    "comando_compilar": "Per compilar executa: cd output && pdflatex informe_resultados.tex",
+    "comando_compilar": "Per compilar executa: cd output && pdflatex informe_sectores.tex",
+    "comando_compilar_barras": "Per compilar executa: cd output && pdflatex informe_barras.tex",
     "resumen": "RESUM",
     "procesado": "Processat",
     "error_procesando": "Error processant",
     "assignatures": "assignatures", 
-    "estudiants": "estudiants"
+    "estudiants": "estudiants",
+    "tabla_asignatura": "Assignatura",
+    "tabla_grupos": "Grups"
 }
