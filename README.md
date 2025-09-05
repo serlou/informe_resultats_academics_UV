@@ -127,6 +127,7 @@ pip install pandas matplotlib openpyxl
 - `pandas`: Para leer y procesar archivos Excel
 - `matplotlib`: Para generar los gráficos de sectores
 - `openpyxl`: Motor para escribir archivos Excel modernos
+- `xldr`: Para leer y procesar archivos Excel
 
 **Nota:** El sistema es compatible con archivos `.xls` y `.xlsx` automáticamente.
 
